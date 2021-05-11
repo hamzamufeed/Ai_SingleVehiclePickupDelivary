@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane fx:id="anchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="647.0" prefWidth="920.0" style="-fx-background-color: #b3e6ff;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.MainController">
+   <children>
+      <Button fx:id="browse" layoutX="24.0" layoutY="27.0" mnemonicParsing="false" onAction="#browse" prefHeight="30.0" prefWidth="108.0" text="Browse File" />
+      <TextField fx:id="fileName" editable="false" layoutX="143.0" layoutY="29.0" promptText="Data File name" style="-fx-background-radius: 90; -fx-border-radius: 90; -fx-border-color: #3333ff;" />
+      <Button fx:id="start" layoutX="24.0" layoutY="69.0" mnemonicParsing="false" onAction="#start" prefHeight="30.0" prefWidth="108.0" style="-fx-background-color: #29a329;" text="Start" textFill="WHITE" />
+      <Button fx:id="data" layoutX="325.0" layoutY="26.0" mnemonicParsing="false" onAction="#displayData" prefHeight="30.0" prefWidth="100.0" text="Display Data" />
+      <Button fx:id="restart" layoutX="819.0" layoutY="26.0" mnemonicParsing="false" onAction="#restart" prefHeight="30.0" prefWidth="78.0" text="Restart" />
+      <Button fx:id="exit" layoutX="819.0" layoutY="69.0" mnemonicParsing="false" onAction="#exit" prefHeight="30.0" prefWidth="78.0" style="-fx-background-color: #ff1a1a;" text="Exit" textFill="WHITE" />
+      <CheckBox fx:id="checkBox" layoutX="143.0" layoutY="75.0" mnemonicParsing="false" selected="true" text="Use Hurestic" />
+      <TableView fx:id="table" layoutX="17.0" layoutY="125.0" prefHeight="510.0" prefWidth="885.0" style="-fx-border-color: #3333ff;">
+        <columns>
+          <TableColumn fx:id="id" prefWidth="75.0" text="Request ID" />
+          <TableColumn fx:id="type" prefWidth="90.39999389648438" text="Request Type" />
+            <TableColumn fx:id="demand" prefWidth="75.0" text="Demand" />
+            <TableColumn fx:id="early_time" prefWidth="119.20001220703125" text="Early Time Window" />
+            <TableColumn fx:id="late_time" prefWidth="121.60003662109375" text="Late Time Window" />
+            <TableColumn fx:id="current_timer" prefWidth="107.20001220703125" text="Arrival Time" />
+            <TableColumn fx:id="current_capacity" prefWidth="103.20001220703125" text="Current Capacity" />
+            <TableColumn fx:id="wait_time" prefWidth="93.5999755859375" text="Wait Time" />
+            <TableColumn fx:id="distance_time" prefWidth="92.0" text="Travel Time" />
+        </columns>
+      </TableView>
+      <Label layoutX="479.0" layoutY="21.0" prefHeight="26.0" prefWidth="66.0" text="Total Time" />
+      <Label layoutX="479.0" layoutY="50.0" prefHeight="30.0" prefWidth="90.0" text="Total Wait Time" />
+      <TextField fx:id="total_wait" editable="false" layoutX="576.0" layoutY="53.0" style="-fx-background-radius: 90; -fx-border-radius: 90; -fx-border-color: #3333ff;" />
+      <TextField fx:id="total_time" editable="false" layoutX="576.0" layoutY="22.0" style="-fx-background-radius: 90; -fx-border-radius: 90; -fx-border-color: #3333ff;" />
+      <Label layoutX="479.0" layoutY="81.0" prefHeight="30.0" prefWidth="90.0" text="Total Travel Time" />
+      <TextField fx:id="total_travel" editable="false" layoutX="576.0" layoutY="84.0" style="-fx-background-radius: 90; -fx-border-radius: 90; -fx-border-color: #3333ff;" />
+      <Button fx:id="chart" layoutX="325.0" layoutY="69.0" mnemonicParsing="false" onAction="#displayChart" prefHeight="30.0" prefWidth="100.0" text="See Chart" />
+   </children>
+</AnchorPane>
